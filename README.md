@@ -52,7 +52,10 @@ To deal with the text jitter which comes from the shifting of surrounding elemen
 I used a text shadow for the focus effect.
 
 There are slight variations in the widths of the words by less than 1px.
-the height is also 25px instead of 26px.
+All list items have a 40px margin right on them as a rule,
+and while horizontal margins don't collapse, the auto margins would have the button remain at it's distance on the right due to available space remaining the same
+if the margin on the last element we're to be removed specifically.
+
 
 ## The Arrow
 The arrow height is 0 px, with a 2 px border border radius 2px
@@ -78,7 +81,7 @@ I can move on to responsive options via media query.
 Flex was only used to Row the elements and align items vertically. I was not so sure that justify content would ensure the horizontal pixel specs of the figma design.
 Or maybe I was taking pixel perfect too literally.
 
-Using live sass watch in vs code for compliation.
+I am using live sass watch in vs code for compliation.
 
 I greatly appreciate as much exposure as I can get to a professional workflow and expectations.
 Hopefully I can work with you all in the future or receive communications in order to prepare for the next hiring cycle or opening.
