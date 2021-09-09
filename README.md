@@ -2,7 +2,7 @@
 Design challenge partial for ClickUp.
 
 In the nature of a pull request
-I have decided to submit a query before moving on to the next section of the layout to learn of what remains unfinished in the navbar for revision.
+I have decided to submit a query before moving on to the next section of the layout & learn what remains unfinished in the navbar for revision.
 If you would please speak on what level's I've given too much or too little consideration.
 
 # Table of Contents
