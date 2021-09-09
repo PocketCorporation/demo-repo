@@ -17,44 +17,46 @@ If you would please speak on what level's I've given too much or too little cons
 ## Deci-rem
 
 I applied a default font size of 62.5% to the root to convert rem to 10px for rounding, so no need for the crazy 16px conversions and division problems.
-This way 1.6 rem now = 16px
+This way 1.6 rem now = 16px.
 
 You can explictly set the font-size on a parent to 1.6rem when you want to use em,
-otherwise you simply add a decimal place to any px value and the conversion is easy
+otherwise you simply add a decimal place to any px value and the conversion is easy.
 
 
 ## Navbar
 
 The highest point across elements at the top is the 'Request Demo button' 210px(13.125rem) x 60px(3.75rem)
-There is 47px above this, which is where I have set the navbar
+There is 47px above this, which is where I have set the navbar.
 
 The top content / navbar is 47 px from the top
-1 px shy of 3rem(48px)
+1 px shy of 3rem(48px).
 
 While this project is made with design software, the use of a border placeholder in design
 can throw things off by the borders thinkness
 whereas outlines don’t affect the elements content positioning.
 
-The left most element is 240px(15rem) from the edge
+The left most element is 240px(15rem) from the edge.
 
-1248 width(47.175rem), 112(7rem) right margin
+1248 width(47.175rem), 112(7rem) right margin.
 
 
 ## The Logo
 
 Made with before and after pseudo elements, I reduced the height of the entire element by the size of margin from the top of the navbar 
-to eliminate bottom overflow
+to eliminate bottom overflow.
 
 
 ## Menu Items
 
 To deal with the text jitter which comes from the shifting of surrounding elements by the font weight of the on focus change
-I used a text shadow for the focus effect
+I used a text shadow for the focus effect.
 
+There are slight variations in the widths of the words by less than 1px.
+the height is also 25px instead of 26px.
 
 ## The Arrow
 The arrow height is 0 px, with a 2 px border border radius 2px
-and the chevron cluster is a total of 14 x 6 px
+and the chevron cluster is a total of 14 x 6 px.
 
 In the design software there is a 90% rotation on the element which suggests that it is the corner of a box, 
 and design software allows for rounded terminals, via border radius.
@@ -76,8 +78,7 @@ I can move on to responsive options via media query.
 Flex was only used to Row the elements and align items vertically. I was not so sure that justify content would ensure the horizontal pixel specs of the figma design.
 Or maybe I was taking pixel perfect too literally.
 
-Using live sass watch in vs code
-vs guld/grunt/webpack
+Using live sass watch in vs code for compliation.
 
 I greatly appreciate as much exposure as I can get to a professional workflow and expectations.
 Hopefully I can work with you all in the future or receive communications in order to prepare for the next hiring cycle or opening.
