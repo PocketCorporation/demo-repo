@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+$colors: (background-color: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%),
+    rectangle32: #9C69E2,
+    rectangle33: #F063B8,
+    avenir500: #4B5D68, 
+    avenir800: #212353);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+;
+
+:root {
+    font-size: 62.5%; // Deci-rem
+}
+
+body {
+    margin: 0 auto;
+    // outline: 1px solid black;
+
+    background: color(background-color);
+    position: relative;
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 4.7rem 24.0rem;
+    height: 6.0rem;
+
+    // outline: 1px solid black;
+
+
+    &__logo {
+        position: absolute;
+        top: 1.2rem;
+        min-width: 4.9rem;
+        min-height: 4.8rem;
+
+        &_design::before {
+            content: '';
+            display: inline-block;
+            width: 2.0rem;
+            height: 2.0rem;
+            background: color(rectangle32);
+            border-radius: 2.0rem;
+        }
+
+        &_design::after {
+            content: '';
+            display: inline-block;
+            width: 2.0rem;
+            height: 3.5rem;
+            margin-left: 0.9rem;
+            background: color(rectangle33);
+            border-radius: 2.0rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        margin-right: auto;
+        margin-left: 12.1rem;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            display: inline-block;
+            height: 2.6rem;
+            margin-top: 1.7rem;
+            margin-right: 4.0rem;
+            text-decoration: none;
+
+            font-family: Avenir, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 160%;
+            transition: text-shadow .3s;
+
+            color: color(avenir500);
+
+            &:focus,
+            &:hover,
+            &:active {
+                color: color(avenir800);
+                text-shadow: 0 0 .060rem #212353, 0 0 .060rem #212353;
+            }
+        }
+
+    }
+
+    &__btn {
+        border: none;
+        min-width: 21.0rem;
+        min-height: 6.0rem;
+
+        display: flex;
+        align-items: center;
+        background: #FFF;
+        position: relative;
+
+        box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+        border-radius: 5.0rem;
+        transition: box-shadow 0.3s ease;
+
+        &:focus,
+        &:hover {
+            box-shadow: 10px -10px 25px 0 rgba(240, 99, 184, 0.5), -10px 10px 25px 0 rgba(156, 105, 226, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        &:active {
+            box-shadow: 10px -10px 25px 0 rgba(240, 99, 184, 0.1), -10px 10px 25px 0 rgba(156, 105, 226, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        &__request-demo {
+            margin-left: 2.9rem;
+            font-family: Avenir, sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.6rem;
+            line-height: 160%;
+
+            letter-spacing: 0.005em;
+            color: color(avenir800);
+        }
+
+        &__icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 2.0rem;
+            height: 1.4rem;
+            margin-left: 2.0rem;
+            border-radius: 50%;
+
+            &_arrow {
+                width: 2.0rem;
+                height: 0.2rem;
+                background: color(rectangle32);
+                transform-origin: right;
+                border-radius: 0.2rem;
+
+                &::before {
+                    transform: translateY(-0.7rem)
+                }
+
+                &::after {
+                    transform: translateY(0.7rem)
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0.922rem;
+                    height: 0.2rem;
+                    background: color(rectangle32);
+                    border-radius: 0.2rem;
+                }
+            }
+
+
+        }
+
+        &__icon_arrow::before {
+            transform-origin: right;
+            transform: rotate(-49.4deg);
+        }
+
+        &__icon_arrow::after {
+            transform-origin: right;
+            transform: rotate(49.4deg);
+        }
+    }
+
+}
